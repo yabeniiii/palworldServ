@@ -1,3 +1,4 @@
+message("sources setting up")
 set(sources 
   project/src/main.cpp
 )

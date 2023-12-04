@@ -1,4 +1,6 @@
+message("config started")
 option(${PROJECT_NAME}_ENABLE_DOXYGEN ON)
+option(BUILD_DOC "Build documentation" ON)
 
 option(${PROJECT_NAME}_WARNINGS_AS_ERRORS ON)
 
