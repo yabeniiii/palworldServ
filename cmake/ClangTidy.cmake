@@ -1,8 +1,5 @@
-# if(${PROJECT_NAME}_CLANG_TIDY)
   message("clang-tidy enabled")
   find_program(CLANGTIDY clang-tidy)
   if(CLANGTIDY)
     set(CMAKE_CXX_CLANG_TIDY ${CLANGTIDY} -extra-arg=-Wno-unknown-warning-option)
-    message("cmake set up")
   endif()
-# endif()
