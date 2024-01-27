@@ -1,4 +1,4 @@
-message("config started")
+message("-- Config started")
 option(${PROJECT_NAME}_ENABLE_DOXYGEN ON)
 option(BUILD_DOC "Build documentation" ON)
 
@@ -15,3 +15,4 @@ if(CCACHE_FOUND)
   set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ccache)
   set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif()
+message("-- Config applied")
