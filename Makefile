@@ -1,7 +1,7 @@
 .PHONY: setup build clean build-release
 
 setup:
-	mkdir build && cd build && cmake -GNinja ..
+	 conan install . -sbuild_type=Debug --output-folder=build --build=missing && cd build && cmake -GNinja -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake ..
 
 build:
 	cd build && cmake --build .
@@ -10,4 +10,4 @@ clean:
 	rm -rf build
 
 build-release:
-	cd build && cmake -GNinja -DCMAKE_BUILD_TYPE=Release .. && cmake --build . 
+	conan install . -sbuild_type=Release --output-folder=build --build=missing && cd build && cmake -GNinja -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
