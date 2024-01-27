@@ -1,4 +1,3 @@
-message("sources setting up")
 set(sources 
   project/src/main.cpp
 )
@@ -6,3 +5,4 @@ set(sources
 set(includes
   project/include/project/..
 )
+message("-- Sources set")
