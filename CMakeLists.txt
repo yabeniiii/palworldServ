@@ -28,7 +28,10 @@ if(result)
   set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
 endif()
 
+find_package(OATPP REQUIRED)
+
 add_executable(${PROJECT_NAME} ${sources})
+target_link_libraries(${PROJECT_NAME} oatpp::oatpp)
 target_include_directories(${PROJECT_NAME} PRIVATE ${includes})
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_23)
 
